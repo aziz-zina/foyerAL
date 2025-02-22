@@ -2,12 +2,11 @@ package com.esprit.foyeral.entities;
 
 import com.esprit.foyeral.entities.enums.TypeChambre;
 import jakarta.persistence.*;
+import java.util.Set;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.Set;
 
 @Entity
 @Table(name = "chambre")
@@ -19,7 +18,10 @@ public class Chambre {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idChambre;
+    
     private Long numeroChambre;
+
+    @Enumerated(EnumType.STRING)
     private TypeChambre typeChambre;
 
     @ManyToOne
