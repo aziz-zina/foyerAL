@@ -36,4 +36,9 @@ public class ChambreController {
   public List<Chambre> getAllChambres() {
     return chambreService.getAll();
   }
+
+  @PostMapping("/batch")
+  public List<Chambre> addChambres(@RequestBody List<Chambre> chambres) {
+    return chambreService.addBatch(chambres);
+  }
 }
