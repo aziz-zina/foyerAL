@@ -27,7 +27,7 @@ public class ChambreController {
     return chambreService.getById(id).orElse(null);
   }
 
-  @DeleteMapping("/{id}")
+  @DeleteMapping("/delete/{id}")
   public void deleteChambre(@PathVariable Long id) {
     chambreService.delete(id);
   }
