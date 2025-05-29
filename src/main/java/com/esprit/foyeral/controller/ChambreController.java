@@ -27,12 +27,12 @@ public class ChambreController {
     return chambreService.getById(id).orElse(null);
   }
 
-  @DeleteMapping("/{id}")
+  @DeleteMapping("/deletee/{id}")
   public void deleteChambre(@PathVariable Long id) {
     chambreService.delete(id);
   }
 
-  @GetMapping("/all")
+  @GetMapping("/getAll")
   public List<Chambre> getAllChambres() {
     return chambreService.getAll();
   }
