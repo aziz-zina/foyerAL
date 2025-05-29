@@ -32,7 +32,7 @@ public class ChambreController {
     chambreService.delete(id);
   }
 
-  @GetMapping("/all")
+  @GetMapping("/getAll")
   public List<Chambre> getAllChambres() {
     return chambreService.getAll();
   }
